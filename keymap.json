@@ -1,0 +1,144 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "alt-j": "menu::SelectNext",
+      "alt-k": "menu::SelectPrevious",
+      "cmd-o": "workspace::ToggleZoom",
+      "ctrl-q": "pane::CloseActiveItem",
+      "alt-q": "pane::CloseActiveItem",
+      "shift-escape": ["workspace::SendKeystrokes", "escape"],
+      "cmd-ctrl-g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" }
+      ],
+      "cmd-shift-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-l": "agent::ToggleFocus",
+
+      "ctrl-h": "editor::MoveLeft",
+      "ctrl-j": "editor::MoveDown",
+      "ctrl-k": "editor::MoveUp",
+      "ctrl-l": "editor::MoveRight",
+      "shift $": "editor::MoveToEnd"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      ";": ["workspace::SendKeystrokes", ":"],
+      "s": "workspace::SaveAll",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "space o": "project_panel::ToggleFocus",
+      "space e": "workspace::ToggleLeftDock",
+      "space /": "vim::ToggleComments",
+      // "shift-o": "workspace::ToggleZoom",
+      // "cmd-o": "workspace::ToggleZoom",
+      "\\": "pane::SplitRight",
+      "|": "pane::SplitHorizontal",
+      "ctrl-c": ["workspace::SendKeystrokes", "g g V G y"],
+      "shift $": "editor::MoveToEnd"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "alt-k": "terminal::ScrollLineUp",
+      "alt-j": "terminal::ScrollLineDown",
+      "alt-u": "terminal::ScrollPageUp",
+      "alt-d": "terminal::ScrollPageDown"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j i j i": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space o": "project_panel::ToggleFocus",
+      "ctrl-l": "project_panel::ToggleFocus",
+      "l": "project_panel::ToggleFocus",
+      "a": "project_panel::NewFile",
+      "d": "project_panel::Delete",
+      "r": "project_panel::Rename",
+      "x": "project_panel::Cut",
+      "enter": "project_panel::Rename",
+      "ctrl-u": [
+        "workspace::SendKeystrokes",
+        "k k k k k k k k k k k k k k k k k k k k k k"
+      ],
+      "ctrl-d": [
+        "workspace::SendKeystrokes",
+        "j j j j j j j j j j j j j j j j j j j j j j"
+      ]
+    }
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "|": "project_panel::OpenSplitHorizontal"
+    }
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "\\": "project_panel::OpenSplitVertical"
+    }
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "v": null
+    }
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "o": null
+    }
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "o": "project_panel::Open"
+    }
+  },
+  {
+    "context": "Editor && Disabled",
+    "bindings": {
+      "cmd-k": "assistant::InlineAssist"
+    }
+  },
+  {
+    "context": "vim_mode == insert || vim_mode == normal",
+    "bindings": {
+      "cmd-k": "editor::ShowSignatureHelp"
+    }
+  }
+]

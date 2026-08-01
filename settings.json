@@ -1,0 +1,175 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run zed: open default settings from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent_ui_font_size": 16.0,
+  "buffer_font_family": ".ZedMono",
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "gutter": {
+    "line_numbers": false
+  },
+  "show_signature_help_after_edits": true,
+  "auto_signature_help": false,
+  "proxy": "",
+  "context_servers": {
+    "shadcn-mcp-server": {
+      "enabled": true,
+      "remote": false,
+      "settings": {}
+    }
+  },
+  "agent_servers": {
+    "claude": {
+      "default_model": "sonnet",
+      "default_mode": "acceptEdits",
+      "favorite_models": ["sonnet"]
+    },
+    "codex-acp": {
+      "type": "registry",
+      "favorite_config_option_values": {
+        "model": ["gpt-5.4"],
+        "reasoning_effort": ["medium"]
+      }
+    },
+    "claude-acp": {
+      "favorite_config_option_values": {
+        "model": ["default"]
+      },
+      "type": "registry",
+      "default_model": "sonnet",
+      "favorite_models": ["sonnet"]
+    },
+    "opencode": {
+      "type": "registry"
+    }
+  },
+  "auto_update": false,
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "font_family": ".ZedMono"
+  },
+  "git_panel": {
+    "tree_view": true,
+    "collapse_untracked_diff": false,
+    "status_style": "label_color"
+  },
+  "use_system_window_tabs": false,
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_branch_name": true,
+    "show_branch_icon": false
+  },
+  "status_bar": {
+    "cursor_position_button": true
+  },
+  "debugger": {
+    "dock": "bottom",
+    "button": true
+  },
+  "search": {
+    "button": true,
+    "include_ignored": false
+  },
+  "ssh_connections": [],
+  "edit_predictions": {
+    "provider": "mercury",
+    "disabled_globs": [],
+    "mode": "eager",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "icon_theme": "Base Charmed Icons",
+  "agent": {
+    "agents_panel_dock": "right",
+    "tool_permissions": {
+      "tools": {
+        "create_directory": {}
+      }
+    },
+    "default_profile": "write",
+    "single_file_review": true,
+    "enable_feedback": true,
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:3b"
+    },
+    "model_parameters": []
+  },
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false
+  },
+  "ui_font_size": 18.0,
+  "buffer_font_size": 18.0,
+  // "ui_font_family": "Noto Sans Mono",
+  // "ui_font_weight": 500,
+  "relative_line_numbers": "enabled",
+  "theme": "Carbonfox - blurred",
+  "active_pane_modifiers": {
+    "border_size": 0.0,
+    "inactive_opacity": 0.7
+  },
+  "autosave": "on_focus_change",
+  "project_panel": {
+    "hide_hidden": false,
+    "entry_spacing": "standard",
+    "hide_gitignore": false,
+    // "hide_hidden": true,
+    "hide_root": true,
+    "indent_size": 14,
+    "sort_mode": "directories_first",
+    "starts_open": true,
+    "auto_fold_dirs": false
+  },
+  "git": {
+    "hunk_style": "unstaged_hollow"
+  },
+  "calls": {
+    "mute_on_join": true
+  },
+  "experimental.theme_overrides": {
+    "modified": "#7AA2F7",
+    "modified.background": "#7AA2F7",
+    "modified.border": "#7AA2F7"
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff", "isort", "mypy"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        },
+        {
+          "external": {
+            "command": "isort",
+            "arguments": ["--profile", "black", "-"]
+          }
+        }
+      ]
+    }
+  },
+  "lsp": {}
+}
