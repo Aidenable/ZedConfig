@@ -79,6 +79,20 @@
     }
   },
   {
+    "context": "GitPanel",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-u": [
+        "workspace::SendKeystrokes",
+        "k k k k k k k k k k k k k k k k k k k k k k"
+      ],
+      "ctrl-d": [
+        "workspace::SendKeystrokes",
+        "j j j j j j j j j j j j j j j j j j j j j j"
+      ]
+    }
+  },
+  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "space o": "project_panel::ToggleFocus",

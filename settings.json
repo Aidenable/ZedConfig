@@ -7,6 +7,16 @@
 // custom settings, run zed: open default settings from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "notification_panel": {
+    "button": true
+  },
+  "disable_ai": true,
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
   "agent_ui_font_size": 16.0,
   "buffer_font_family": ".ZedMono",
   "diagnostics": {
@@ -60,6 +70,7 @@
     "font_family": ".ZedMono"
   },
   "git_panel": {
+    "dock": "right",
     "tree_view": true,
     "collapse_untracked_diff": false,
     "status_style": "label_color"
@@ -98,6 +109,7 @@
   },
   "icon_theme": "Base Charmed Icons",
   "agent": {
+    "dock": "right",
     "agents_panel_dock": "right",
     "tool_permissions": {
       "tools": {
@@ -124,13 +136,14 @@
   // "ui_font_family": "Noto Sans Mono",
   // "ui_font_weight": 500,
   "relative_line_numbers": "enabled",
-  "theme": "Carbonfox - blurred",
+  "theme": "Nightfox - blurred",
   "active_pane_modifiers": {
     "border_size": 0.0,
     "inactive_opacity": 0.7
   },
   "autosave": "on_focus_change",
   "project_panel": {
+    "dock": "left",
     "hide_hidden": false,
     "entry_spacing": "standard",
     "hide_gitignore": false,
